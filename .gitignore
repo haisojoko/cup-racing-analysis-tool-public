@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Build artifacts
+output/
+
+# Runtime-generated private memory — NEVER commit these.
+# The tool writes driver profiles, qualitative sources, league notes, and chat
+# history here at runtime. They can contain personal reads on real people, so
+# they stay local. corrections.md (curated stat facts) is the only tracked file
+# under memory/. Fictional demo data lives in examples/ instead.
+memory/profiles/
+memory/sources/
+memory/league.md
+memory/chat_history.json
+memory/chat_history.json.*
+
+# OS
+.DS_Store

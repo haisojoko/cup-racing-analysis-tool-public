@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cup Racing Analysis Tool</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>Cup Racing — Analysis Buddy</h1>
+    </div>
+    <div class="meta">
+      <span id="status">connecting…</span>
+      <button id="clear" title="Clear this conversation (profiles untouched)">Clear chat</button>
+    </div>
+  </header>
+
+  <main id="history" aria-live="polite"></main>
+
+  <footer>
+    <div id="pending"></div>
+    <form id="composer">
+      <textarea id="input" rows="3"
+        placeholder="Ask about a driver, paste an interview or long quote… (Enter to send, Shift+Enter for a new line)"></textarea>
+      <button id="send" type="submit">Send</button>
+    </form>
+    <div class="hint">No length limit — paste full interviews or transcripts here.</div>
+  </footer>
+
+  <script src="/static/marked.min.js"></script>
+  <script src="/static/purify.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

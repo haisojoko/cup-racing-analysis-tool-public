@@ -1,0 +1,33 @@
+[project]
+name = "cup-racing-analysis-tool"
+version = "0.1.0"
+description = "Conversational, fact-grounded AI analysis partner for the Cup Racing league"
+requires-python = ">=3.9"
+dependencies = [
+    "duckdb>=1.0.0",
+    "pydantic>=2.0.0",
+    "litellm>=1.40.0",
+    "rich>=13.0.0",
+    "typer>=0.12.0",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+]
+
+# cup-racing-insights is consumed as a library but installed separately with
+# --no-deps (see README) so its Playwright/Jinja deps aren't pulled in. The
+# modules we use (db, parser, detectors, scoring, models) only need duckdb +
+# pydantic, which are declared above.
+
+[project.scripts]
+buddy = "analysis_tool.cli:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["analysis_tool*"]
+
+[tool.setuptools.package-data]
+analysis_tool = ["web/static/*"]
