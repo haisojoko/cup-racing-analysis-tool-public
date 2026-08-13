@@ -1,6 +1,6 @@
 # Cup Racing Analysis Tool
 
-A conversational, **fact-grounded** AI analysis partner for the Cup Racing league
+A conversational, **fact-grounded** AI analysis tool for the Cup Racing league
 coordinator. It discusses the league's history, gives opinions backed by the data
 (not vibes), reads driver psychology from behavioral signals plus recorded
 qualitative sources, and conservatively maintains per-driver profiles.
@@ -15,8 +15,6 @@ custom tools. The LLM runs through **LiteLLM** (OpenRouter by default).
 > are private); fictional stand-ins live in [`examples/`](examples/) so the
 > qualitative features are still demonstrable.
 
-> Built for J, the **non-participant league coordinator** — every driver is
-> discussed in the third person; J is never framed as a competitor.
 
 ## How it stays honest
 
@@ -66,8 +64,7 @@ cp .env.example .env        # then set OPENROUTER_API_KEY
 
 ### Browser portal (`buddy serve`)
 
-Opens a local page (binds `127.0.0.1` only) with a roomy input box — **no
-character limit**, so you can paste full interviews or long transcripts that a
+Opens a local page (binds `127.0.0.1` only) with a an input box, so you can paste full interviews or long transcripts that a
 terminal would truncate at the TTY's ~1KB line cap. The page **always shows the
 chat history** (persisted to `memory/chat_history.json`) and renders tool activity
 inline. Profile-prose proposals appear as **Apply / Decline cards** instead of the
